@@ -1,0 +1,447 @@
+
+/* .svg{
+  display: block;
+} */
+
+#app2{
+  display: none;
+}
+
+
+
+@media (max-width: 780px) {
+  .prev-arrow, .next-arrow{
+    display: none; 
+  }
+}
+
+@media (max-width: 600px) {
+
+#app1{
+  display: none;
+}
+#app2{
+  display: block;
+}
+.svg{
+  display: none;
+}
+.prev-arrow, .next-arrow{
+  /* display: none; */
+}
+.carousel {
+    margin: 24px 0px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .carousel-sections-scroll {
+    flex: 1;
+    overflow: hidden;
+  }
+  .carousel-sections {
+    height: auto;
+    display: flex;
+    transition: 250ms transform ease-in;
+  }
+  
+  .carousel-sections > div {
+    min-width: 100%;
+    height: 100%;
+    border-radius: 24px;
+  }
+  
+
+  .next-arrow:after {
+    top: 4px;
+    transform: rotate(-45deg);
+  }
+  .next-arrow:before {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  
+  .carousel-dots {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #EAEAEA;
+    margin: 0px 4px;
+    transition: 100ms background-color ease-in;
+  }
+  .carousel-dot.active {
+    background-color: #5BC8AF;
+  }
+  /* Testimonial Card */
+  .testimonial-card {
+      position: relative;
+      background-color: #004734; /* Green background */
+      color: #ffffff;
+      width: -webkit-fill-available; /* Fixed width */
+      border-radius: 15px;
+      padding: 133px 24px 30px;
+      text-align: left;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: visible; /* Allow the image to float outside */
+      margin: 70px auto 40px auto;
+  }
+  
+  /* Floating Image */
+  .testimonial-image {
+      position: absolute;
+      top: -65px;
+      left: 39%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 180px;
+      /* border-radius: 12px; */
+      overflow: hidden;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      background-color: #ffffff;
+  }
+  
+  .testimonial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintain proportions */
+  }
+
+  /* Testimonial Content */
+  .testimonial-content {
+      background-color: #004734; /* Match the card background */
+      color: #d4e9e2;
+      padding-top: 30px; /* Space for floating image */
+      padding-bottom: 20px; /* Add bottom padding */
+      line-height: 1.6; /* Improve text spacing */
+      border-radius: 15px;
+      min-height: 200px; /* Ensure enough height for text */
+      padding-left: 41px;
+  }
+  
+  .testimonial-name {
+      font-size: 1.5rem; /* Slightly larger name */
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+      padding: 0px 10px;
+  }
+  
+  .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #d4e9e2;
+      padding: 0 10px; /* Adjust padding */
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #d4e9e2;
+      padding: 0 10px;
+      /* font-family: Montserrat; */
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+  }
+  
+  /* Quote Icon */
+  .quote-icon {
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 10px;
+      position: absolute;
+      right: 26px;
+      width: 34px;
+      height: 41px;
+      top: -94px;
+  }
+}
+#p-hide{
+  display: none;
+}
+#hidden{
+  display: none;
+}
+#p-block2{
+  display: none;
+}
+@media (max-width:579px) {
+    #hidden{
+      display: block;
+    }
+    #block{
+      display: none;
+    }
+}
+
+@media (max-width:1024px) {
+    #p-block{
+      display: none;
+    }
+    #p-hide{
+      display: block;
+    }
+    #p-block2{
+      display: block;
+    }
+
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  /* color: #555; */
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 20px;
+  /* max-width: 900px; */
+  margin: 0 auto;
+}
+
+/* Button Styling */
+.info-button {
+  background: #f8f9fa;
+  border: 2px solid #1aac8f;
+  color: #333333;
+  font-size: 1rem;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Make all buttons the same size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px; /* Adjust as per content */
+  width: 100%;
+}
+
+.info-button:hover {
+  /* background: #1aac8f; */
+  color:#5BC8AF;
+}
+
+/* Tooltip Container */
+.tooltip-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #1aac8f;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1aac8f transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 490px) {
+  .button-grid {
+    grid-template-columns: 1fr; /* Stack buttons vertically */
+  }
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  background-color: #1aac8f;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Arrow pointing down */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1aac8f transparent transparent transparent;
+}
+/* Hide info icon by default */
+.info-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px; /* Space between text and icon */
+  vertical-align: middle;
+}
+
+/* Display icon when button is hovered */
+.info-button:hover .info-icon {
+  display: inline-block;
+}
+
+/* Button styling */
+.info-button {
+  background: #f8f9fa;
+  border: 2px solid #1aac8f;
+  color: #333;
+  font-size: 1rem;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  position: relative; /* For tooltip positioning */
+}
+
+.tooltip-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Default button styles */
+.button-container button {
+  color: #1aac8f; /* Default text color */
+  border: 2px solid #1aac8f;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+  width: -webkit-fill-available;
+}
+
+/* Hover Effect */
+.button-container button:hover {
+  background-color: #fff; /* Change background to white */
+  color: #1aac8f; /* Text color matches border */
+  border: 2px solid #1aac8f; /* Keep border consistent */
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 8px 15px rgba(26, 172, 143, 0.3); /* Add a deeper shadow */
+}
+
+/* Optional: Active (click) effect */
+.button-container button:active {
+  transform: scale(1); /* Scale back to normal on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background-color: #297C6B;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1aac8f transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 403px) {
+    .testimonial-content{
+      padding-left: 0px;
+}}

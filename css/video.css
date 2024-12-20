@@ -1,0 +1,474 @@
+/* General Reset */
+
+/* Video Section Styling */
+.video-section {
+    display: flex;
+    align-items: stretch; /* Ensures both sides stretch equally */
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+}
+
+/* Left Content with Background Image */
+.content-left {
+    flex: 1;
+    padding: 40px;
+    background-image: url('../img/Group 51.png'), url('..img/Rectangle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* Higher z-index to overlap */
+    height: 600px;
+    margin-bottom: -80px; /* Push upwards for overlap */
+}
+.bottom-right-image {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    right: 24px; /* Distance from the right */
+    z-index: 10; /* Ensures the image stays above other elements */
+}
+
+.bottom-right-image img {
+    margin-bottom: 12px;
+}
+
+.content-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px; /* Extend slightly left for overlap */
+    width: 111%; /* Ensure background overflows into right side */
+    height: 100%;
+    background: inherit; /* Use the same background */
+    z-index: -1;
+    transform: scaleY(1.05); /* Slight vertical stretch for wave effect */
+    /* background-image: url('img/Group\ 51.png'), url('img/Rectangle.png'); */
+    
+}
+
+.content-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight1{
+    color: #1AAC8F;
+    font-size: 36px;
+    font-weight: 900;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    margin: 0;
+}
+
+.video-text .info-item {
+    margin-bottom: 15px;
+}
+@media(min-width:950px){
+.video-text .info-item p {
+    margin: 5px 0;
+    color:rgba(255, 255, 255, 0.8)  ;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;       
+}
+}
+strong{
+    color: white;
+}
+
+/* Right Content */
+.content-right {
+    flex: 1;
+    position: relative;
+    background-image: url('../img/Mask\ Group\ \(3\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Lower stacking order */
+    height: 600px;
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Play Button Styling */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.play-btn img {
+    width: 104px;
+}
+
+
+@media(max-width:1300px){
+    .content-left::before{
+        width: 113%;
+    }
+}
+@media(max-width:1300px){
+    .content-right, .content-left{
+        height: 480px;
+    }
+}
+@media(max-width:950px){
+    .content-right, .content-left{
+        height: 400px;
+    }
+    .content-left h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+}
+
+.play-btn1{
+    display: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        background-color: #f8f8f8; /* Light gray background */
+        color: #888888; /* Medium gray text color */
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        border-top: 1px solid #e0e0e0; /* Light top border */
+    }
+    .bottom-right-image{
+        right: 50%; /* Move horizontally to the center */
+        transform: translateX(50%); /* Center the image */
+        bottom: 10px; /* Adjust bottom spacing */
+    }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    .play-btn{
+        display: none;
+    }
+    .play-btn1{
+        display: block;
+    }
+    .video-section{
+        flex-direction: column;
+    }
+    .wave-container{
+        height: 500px;
+    }
+    .content-left {
+        flex: 1;
+        padding: 40px;
+        background-image: url('../img/Rectangle (1).png'), url('../img/Rectangle (2).png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2; /* Higher z-index to overlap */
+        height: 600px;
+        margin-bottom: -80px; /* Push upwards for overlap */
+    }
+    .content-left::before {
+        content: "";
+        position: absolute;
+        /* top: -439px; */
+        left: -20px;
+        width: 111%;
+        height: 200%;
+        background: inherit;
+        z-index: -1;
+        transform: scaleY(1.05);
+        top: -303px;
+    }
+    .play-btn1 {
+        display: flex; /* Show button */
+        position: absolute; /* Fixed position relative to the viewport */
+        top: 51%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Perfect centering */
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 9999; /* Always on top */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .play-btn1 img {
+        width: 104px; /* Adjust size for smaller screens */
+    }
+    .video-text .info-item p {
+        margin: 5px 0;
+        color:rgba(255, 255, 255, 0.8)  ;
+     
+    }
+    .footer {
+        background-color: #f8f8f8; /* Light gray background */
+        color: #888888; /* Medium gray text color */
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        border-top: 1px solid #e0e0e0; /* Light top border */
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 551px) {
+   
+    .wave-container{
+        height: 380px;
+    }
+    .content-left {
+        flex: 1;
+        padding: 40px;
+        background-image: url('../img/Rectangle (1).png'), url('../img/Rectangle (2).png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2; /* Higher z-index to overlap */
+        height: 600px;
+        margin-bottom: -80px; /* Push upwards for overlap */
+    }
+    .content-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px; /* Extend slightly left for overlap */
+    width: 111%; /* Ensure background overflows into right side */
+    height: 100%;
+    background: inherit; /* Use the same background */
+    z-index: -1;
+    transform: scaleY(1.05); /* Slight vertical stretch for wave effect */
+    /* background-image: url('img/Group\ 51.png'), url('img/Rectangle.png'); */
+    
+}
+}
+
+@media (max-width: 430px) {
+  
+    .wave-container{
+        height: 325px;
+    }
+}
+/* Play Button Styling */
+
+/* Parent Container Adjustment */
+.video-section {
+    position: relative; /* Ensures the play button is positioned relative to this container */
+    z-index: 1; /* Lower z-index for the container */
+}
+@media (max-width: 721px) {
+    .play-btn1{
+        top:49%;
+    }
+}
+@media (max-width: 647px) {
+    .play-btn1{
+        top:53%;
+    }
+}
+@media (max-width: 640px) {
+    .play-btn1{
+        top:56%;
+    }
+}
+@media (max-width: 583px) {
+    .play-btn1{
+        top: 59%;
+    }
+}
+@media (max-width: 551px) {
+    .play-btn1{
+        top: 58%;
+    }
+}
+@media (max-width: 430px) {
+    .play-btn1{
+        top: 62%;
+    }
+}
+@media (max-width: 428px) {
+    .play-btn1{
+        top: 64%;
+    }
+}
+@media (max-width: 405px) {
+    .play-btn1{
+        top: 64%;
+    }
+}
+@media (max-width: 390px) {
+    .play-btn1{
+        top: 65%;
+    }
+}
+@media (max-width: 360px) {
+    .play-btn1{
+        top: 66%;
+    }
+}
+@media (max-width: 358px) {
+    .play-btn1{
+        top: 67%;
+    }
+}
+@media (max-width: 346px) {
+    .play-btn1{
+        top: 67%;
+    }
+}
+@media (max-width: 305px) {
+    .play-btn1{
+        top: 69%;
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Responsive video */
+video {
+    width: 100%;
+    height: auto;
+}
+/* Footer Styling */
+.footer {
+    background-color: #f8f8f8; /* Light gray background */
+    color: #888888; /* Medium gray text color */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 1px solid #e0e0e0; /* Light top border */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #888888;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+/* Bottom-right image positioning */
+.content-right {
+    position: relative; /* Needed for absolute positioning inside */
+}
+
+/* Input Field Error Styling */
+.input-error {
+    border: 2px solid rgba(255, 119, 119, 1) !important; /* Red border */
+    outline: none;
+}
+
+/* Label Styling for Error State */
+.input-error + label {
+    color: rgba(255, 119, 119, 1) !important; /* Red color for label */
+}
+
+/* Error Message Styling */
+

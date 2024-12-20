@@ -1,0 +1,834 @@
+General Body Styling
+
+
+/* Contact Card */
+.contact-card {
+    width: 472px;
+    background-color: #2A7D6C;
+    border-radius: 12px 0 0 0;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34.13px;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Rows */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .input-group {
+    flex: 1;
+}
+
+/* Input Group */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: -webkit-fill-available;
+    padding: 0.8rem 1rem;
+    background-color: #FFFFFF0A;
+    border: 1px solid #FFFFFF80;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Add focus border effect */
+.input-group input:focus {
+    border: 1px solid #ffffff; 
+    background-color: #2A7D6C;
+}
+
+/* Label Styling */
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffffff80;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Move label to top when focused or filled */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 0rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+     background-color: #2A7D6C; 
+    padding: 0 0.3rem;
+    color: white;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    /* transition: border-color 0.3s ease; */
+}
+
+.input-group.full-width {
+    flex: 1 0 100%;
+}
+
+/* Submit Button */
+button {
+    padding: 0.8rem;
+    background-color: #34D399;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+/* button:hover {
+    background-color: #2BC08C;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* .contact-card {
+        width: 90%;
+        padding: 1.5rem;
+        border-radius: 0;
+    } */
+    /* #country {
+        width: 90%!important;
+    } */
+}
+@media  (max-width: 1103px) {
+    .section1{
+        height:1090px;
+    }
+    .middle_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 0;
+    }
+    .content_text {
+        width: 92%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0px;
+    }
+    .section_title{
+        margin: 0!important
+        ;
+    }
+
+}
+@media  (max-width: 450px) {
+    .content_text .section_title{
+        font-size: 31px;
+    }
+}
+.contact-card{
+    padding: 32px;
+    background: #2A7D6C;
+    border-radius: 12px;
+}
+.logo{
+    margin-left: 68px;
+}
+@media  (max-width: 1570px) {
+    .logo{
+        margin-left: -22px;
+    }
+}
+@media  (max-width: 931px) {
+    .logo{
+        margin-left: 0px;
+    }
+}
+/* Label Styling */
+ .input-group:focus-within label {
+    position: absolute;
+    top: 0%; /* Start label in the center */
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffffff80;
+    pointer-events: none;
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 1111;
+    /* background-color: #3E6960; */
+}
+.input-group:active label {
+    position: absolute;
+    top: 0%; /* Start label in the center */
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffffff80;
+    pointer-events: none;
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 1111;
+    background-color: #2A7D6C;
+}
+
+
+/* Dropdown Styling */
+.input-group select {
+    width: 90%;
+    padding: 0.8rem 1rem;
+    background-color: #FFFFFF0A;
+    border: 1px solid #FFFFFF80;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Add focus effect for dropdown */
+.input-group select:focus {
+    border: 1px solid #ffffff;
+    background-color: #2A7D6C;
+}
+
+/* Label Styling for Dropdown */
+.input-group select:focus + label,
+.input-group select:not(:placeholder-shown) + label {
+    top: -0.8rem; /* Moves label up */
+    left: 0.8rem;
+    font-size: 0.8rem;
+    background-color: #2A7D6C;
+    padding: 0 0.3rem;
+    color: white;
+    z-index: 2;
+}
+/* Error Message Styling */
+.error-msg {
+    display: none; /* Hidden by default */
+    color: #FF7F7F; /* Light red color */
+    background-color: #FF6F6F;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    position: absolute;
+    top: 110%; /* Position below input */
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    position: relative; /* Allows positioning of error message */
+}
+
+/* Highlight Input Field on Error */
+.input-group input.error {
+    border-color: #FF6F6F;
+}
+.get{
+    width: 484px;
+}
+/* General styling */
+.section_title {
+    font-family: Arial, sans-serif; /* Replace with your specific font */
+    font-size: 48px; /* Adjust as needed */
+    font-weight: 00; /* Bold weight */
+    color: transparent; /* Make the fill transparent */
+    -webkit-text-stroke:1px white; /* White outline with a 2px stroke */
+    text-transform: uppercase; /* Optional: Makes the text uppercase */
+  }
+  
+  /* Highlighted text */
+  .section_title .highlight {
+    color: #FFFFFF; /* Solid white for 'INTERVENTION' */
+    font-weight: 900; /* Heavier font weight */
+  }
+  /* Dropdown Menu - Initially Hidden */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust based on your nav position */
+    right: 0px;
+    left: 0px;
+    background-color: #194D44; /* Dropdown background color */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width:-webkit-fill-available ;
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu li {
+    margin-bottom: 23px;
+    color: #FFFFFF; /* Menu text color */
+    font-family: Arial, sans-serif;
+}
+
+.dropdown_menu a {
+    text-decoration: none;
+    color: #cdcdcd;
+    font-weight: bold;
+}
+
+.dropdown_menu a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    /* text-decoration-thickness: 2px; */
+    text-underline-offset: 3px;
+    color: #FFFFFF;
+}
+
+/* Hamburger Icon Style */
+.buttonnav {
+    cursor: pointer;
+}
+
+.nav_links a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+    /* text-decoration-thickness: 2px; */
+    text-underline-offset: 3px;
+    color: #FFFFFF;
+}
+
+/* Phone Section */
+.phone {
+    font-weight: lighter;
+    color: #5BC8AF;
+    font-weight: 700;
+}
+.phone:hover{
+    text-decoration: underline;
+}
+/* Dropdown Menu - Initially Hidden */
+.dropdown_menu {
+    display: block; /* Change to block for transition visibility */
+    position: absolute;
+    top: 60px; /* Adjust based on your nav position */
+    right: 0px;
+    left: 0px;
+    background-color: #194D44; /* Dropdown background color */
+    padding: 0; /* Start with no padding */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: -webkit-fill-available;
+    max-height: 0; /* Start hidden with max-height 0 */
+    overflow: hidden; /* Hide overflowing content */
+    opacity: 0; /* Start fully transparent */
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+}
+
+/* Dropdown Menu Active State */
+.dropdown_menu.active {
+    max-height: 500px; /* Adjust to the content height */
+    opacity: 1; /* Fade in */
+    padding: 15px; /* Add padding when visible */
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu li {
+    margin-bottom: 23px;
+    color: #FFFFFF; /* Menu text color */
+    font-family: Arial, sans-serif;
+}
+
+.dropdown_menu a {
+    text-decoration: none;
+    color: #cdcdcd;
+    font-weight: bold;
+}
+
+.dropdown_menu a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #FFFFFF;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+}
+
+/* Hamburger Icon Style */
+.buttonnav {
+    cursor: pointer;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+}
+/* Dropdown Menu - Initially Hidden */
+.dropdown_menu {
+    display: block; /* Change to block for transition visibility */
+    position: absolute;
+    top: 60px; /* Adjust based on your nav position */
+    right: 0px;
+    left: 0px;
+    background-color: #194D44; /* Dropdown background color */
+    padding: 0; /* Start with no padding */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: -webkit-fill-available;
+    max-height: 0; /* Start hidden with max-height 0 */
+    overflow: hidden; /* Hide overflowing content */
+    opacity: 0; /* Start fully transparent */
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+}
+
+/* Dropdown Menu Active State */
+.dropdown_menu.active {
+    max-height: 500px; /* Adjust to the content height */
+    opacity: 1; /* Fade in */
+    padding: 15px; /* Add padding when visible */
+}
+
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown_menu li {
+    margin-bottom: 23px;
+    color: #FFFFFF; /* Menu text color */
+    font-family: Arial, sans-serif;
+}
+
+.dropdown_menu a {
+    text-decoration: none;
+    color: #cdcdcd;
+    font-weight: bold;
+}
+
+.dropdown_menu a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #FFFFFF;
+}
+
+/* Hamburger Icon Style */
+.buttonnav {
+    cursor: pointer;
+}
+/* Dropdown Menu - Hidden State */
+.dropdown_menu {
+    position: absolute;
+    top: 60px; /* Adjust based on your nav position */
+    right: 0px;
+    left: 0px;
+    background-color: #194D44; /* Dropdown background color */
+    padding: 0; /* Initially no padding */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: -webkit-fill-available;
+    max-height: 0; /* Hidden height */
+    opacity: 0; /* Start invisible */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+    visibility: hidden; /* Hide it visually */
+}
+
+/* Dropdown Menu - Active State */
+.dropdown_menu.active {
+    max-height: 500px; /* Adjust to accommodate your content */
+    opacity: 1; /* Fully visible */
+    padding: 15px; /* Add padding */
+    visibility: visible; /* Make it visible */
+}
+/* Dropdown Menu */
+.dropdown_menu {
+    position: absolute;
+    background-color: #194D44;
+    color: white;
+    top: 60px; /* Adjust based on header height */
+    right: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: -webkit-fill-available;
+    max-height: 0; /* Hidden height */
+    opacity: 0; /* Start invisible */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease; /* Smooth transition */
+    visibility: hidden; /* Hide it visually */
+}
+
+/* Style for dropdown links */
+.dropdown_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown_menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+/* Hide Cross Icon initially */
+#crossIcon {
+    cursor: pointer;
+}
+
+#hamburgerIcon {
+    cursor: pointer;
+}
+/* Hamburger Icon */
+
+
+/* Cross Icon */
+#crossIcon {
+    display: none; /* Hidden initially */
+    cursor: pointer;
+}
+
+/* Dropdown Menu Styling */
+#dropdownMenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #194D44;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#dropdownMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dropdownMenu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+#dropdownMenu a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    display: none;
+    position: absolute;
+    bottom: -50px; /* Adjust to give more space */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+    background-color: rgba(255, 119, 119, 1);
+    color: #fff;
+    padding: 8px 15px; /* Add more padding for spacing */
+    font-size: 0.9rem; /* Adjust font size */
+    border-radius: 8px;
+    white-space: normal; /* Allow text wrapping */
+    width: 200px; /* Set a fixed width to handle two lines */
+    height: 61px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    line-height: 1.4; /* Adjust line height for better spacing */
+}
+
+.error-msg::before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 13px;
+    border-style: solid;
+    border-color: transparent transparent #ff6b6b
+}
+
+input.error {
+    border-color: #ff6b6b; /* Highlight the input border in red */
+    outline: none;
+}
+/* Main container styling */
+/* Parent container */
+.hero_container_1 {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* max-width: 1200px; */
+    margin: 40px 70px;
+}
+
+/* Images Section */
+.sec2 {
+    display: flex; /* Use flexbox for images */
+    justify-content: space-between; /* Align images to the left */
+    gap: 30px; /* Space between images */
+    width: 100%; /* Full width of the parent */
+    max-width: 1470px;
+}
+
+/* Individual image */
+.img-text {
+    flex: 1; /* Equal width for images */
+    max-width: 300px; /* Control image width */
+}
+
+.sourceimg {
+    width: 100%; /* Image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    object-fit: cover; /* Fit image properly */
+}
+
+/* WE UNDERSTAND Text */
+.WeText {
+    text-align: left; /* Align the text to the left */
+    margin-left: 0; /* Ensure no extra margin */
+    padding-left: 0; /* Align text flush with images */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 15px; /* Adds space between text and line image */
+    overflow: hidden; /* Prevents text overflow issues */
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 36px; /* Fixed font size */
+    font-weight: 900;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    color: transparent;
+    -webkit-text-stroke: 2px #333; /* Outline effect for "WE" */
+    margin: 0;
+}
+.heading .subhead {
+    color: #333; /* Solid color for UNDERSTAND */
+    font-weight: 600;
+}
+/* Parent container */
+.hero_container_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between sections */
+    padding: 20px; /* General padding */
+    /* max-width: 1200px; */
+}
+
+/* Grid layout for paragraphs */
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns for desktop */
+    gap: 30px; /* Space between columns */
+}
+.content-container2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns for desktop */
+    gap: 30px; /* Space between columns */   
+    margin-top: 35px;
+}
+/* Responsive settings for content */
+.content-container .content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+.content-container2 .content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+.button-container {
+    display: flex;
+    justify-content: left;
+}
+
+.button-container button {
+    background-color:transparent ;
+    border: 2px solid #34D399;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #5BC8AF;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #2BC08C;
+    color: white;
+}
+#hide{
+    display: none;
+  }
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .content-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    }
+    .content-container2 {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    }
+    .heading{
+        font-size: 1.9rem;
+    }
+    #hide{
+        display: block;
+    }
+    #hide2{
+        display: none;
+    }
+    .hero_container_1{
+        margin: 0;
+    }
+}
+@media (max-width: 808px) {
+    .testimonial-image{
+        height: 197px;
+        width: 197px;
+    }
+    .testimonial-content{
+        height: 197px;
+    }
+    .test-head{
+        font-size: 15px;
+    }
+    .top-right-image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+    }
+    .content-container{
+        gap: 3px;
+    }
+    .content-container2{
+        gap: 3px;
+    }
+
+}
+@media (max-width: 691px){
+    .test-para{
+        font-size: 11px;
+        margin: 0;
+        
+    }
+    .testimonial-content{
+        padding: 0px 21px;
+    }
+}
+@media (max-width: 618px){
+    .test-para{
+        line-height: 19px;
+    }
+}
+@media (max-width: 650px) {
+    .content-container {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .content-container2 {
+        grid-template-columns: 1fr; /* One column layout for mobile */
+    }
+    .button-container {
+        justify-content: flex-start; /* Align button to the left */
+    }
+    #hide{
+        display: none;
+    }
+    #hide2{
+        display: flex;
+    }
+    .img-text{
+        display: none!important;
+    }
+    .hero_container_1{
+        margin: 10px!important; 
+    }
+    .WeText{
+        margin-top: 0!important;
+    }
+    .button-container{
+        justify-content: center;
+    }
+    .button-container button{
+        padding: 10px 61px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_container_1 {
+        padding: 0px; /* Smaller padding for small devices */
+    }
+    .heading {
+        font-size: 32px; /* Reduce heading size for small screens */
+    }
+}
+p.diff{
+    /* font-family: Montserrat; */
+/* max-width: 74%; */
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #333333;
+
+}
+@media (max-width: 600px) {
+
+}
